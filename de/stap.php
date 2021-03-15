@@ -3,7 +3,6 @@
 ?>
 
 <!doctype html>
-<!doctype html>
 <html lang="en">
   <head>
     <!-- Required meta tags -->
@@ -53,7 +52,7 @@
 		$temp[1] = $rowdata['Step_2'];
 		$temp[2] = $rowdata['Step_3'];
 		$temp[3] = $rowdata['Step_4'];
-
+		echo 
 		for ($i = 1; $i <= $rowdata['No_of_steps']; $i++) {
 			$k = $temp[$i - 1];
 			echo "
@@ -63,13 +62,13 @@
 						<p class='card-text'>$k Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis nostrum dolor illo? Dolor a voluptates est officiis velit, maxime provident autem nostrum nobis aperiam vel.</p>
 					</div>
 				</div>-->
-			
-				<div  class='card bg-success text-white'>
-				<div class='card-header'>Header</div>
-				<div class='card-body'>
-				<h5 class='card-title'>Step $i</h5>
-				<p class='card-text'>$k Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis nostrum dolor illo? Dolor a voluptates est officiis velit, maxime provident autem nostrum nobis aperiam vel.</p>
-				</div>
+				
+				<div  class='card bg-success text-white mx-auto my-3' style='width: 25rem;'>
+					<div class='card-header'>Header</div>
+					<div class='card-body'>
+					<h5 class='card-title'>Step $i</h5>
+					<p class='card-text'>$k Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis nostrum dolor illo? Dolor a voluptates est officiis velit, maxime provident autem nostrum nobis aperiam vel.</p>
+					</div>
 				</div>
 			";
 		} 	
