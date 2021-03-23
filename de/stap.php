@@ -47,30 +47,16 @@
 	$iab_data->execute();
 	while ($rowdata = $iab_data->fetch(PDO::FETCH_ASSOC)) {
 		// echo $rowdata['Step_1'];
-		$temp = [];
-		$temp[0] = $rowdata['Step_1'];
-		$temp[1] = $rowdata['Step_2'];
-		$temp[2] = $rowdata['Step_3'];
-		$temp[3] = $rowdata['Step_4'];
-		echo 
+		$temp;
 		for ($i = 1; $i <= $rowdata['No_of_steps']; $i++) {
-			$k = $temp[$i - 1];
-			echo "
-				<!--<div class='card bg-primary'>
-					<div class='card-header'>Step $i</div>
-					<div class='card-body text-center'>
-						<p class='card-text'>$k Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis nostrum dolor illo? Dolor a voluptates est officiis velit, maxime provident autem nostrum nobis aperiam vel.</p>
-					</div>
-				</div>-->
-				
-				<div  class='card bg-success text-white mx-auto my-3' style='width: 25rem;'>
-					<div class='card-header'>Header</div>
-					<div class='card-body'>
-					<h5 class='card-title'>Step $i</h5>
-					<p class='card-text'>$k Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis nostrum dolor illo? Dolor a voluptates est officiis velit, maxime provident autem nostrum nobis aperiam vel.</p>
-					</div>
-				</div>
-			";
+			$temp = 'Step_'.$i;
+			echo "	<div  class='card bg-success text-white mx-auto my-3' style='width: 25rem;'>
+						<div class='card-header'>Header</div>
+						<div class='card-body'>
+						<h5 class='card-title'>Step $i</h5>
+						<p class='card-text'>$rowdata[$temp] Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis nostrum dolor illo? Dolor a voluptates est officiis velit, maxime provident autem nostrum nobis aperiam vel.</p>
+						</div>
+					</div>";
 		} 	
 	}
 	?>
